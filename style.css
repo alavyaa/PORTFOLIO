@@ -1,0 +1,203 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #1f1f2e; /* Dark royal background */
+    color: #f0e6f6;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2c2c44;
+    padding: 20px 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav div {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d4c0eb;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #f0e6f6;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+header nav ul li a:hover {
+    color: #d4c0eb;
+    transform: scale(1.05);
+}
+
+/* Main layout - image left, text center, skills flexbox right */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Image on the left - bigger and circular */
+main img {
+    width: 250px;       /* increased size */
+    height: 250px;      /* match width for circle */
+    border-radius: 50%; /* perfect circle */
+    object-fit: cover;
+    border: 4px solid #d4c0eb;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+main img:hover {
+    transform: scale(1.05);
+}
+
+/* Center text */
+main p {
+    text-align: center;
+    max-width: 400px;
+    color: #f0e6f6;
+    font-size: 1.2rem;
+}
+
+/* Skills flexbox on the right */
+.skill.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 180px; /* match image size */
+}
+
+.skill.container .skill {
+    background-color: #2c2c44;
+    color: #f0e6f6;
+    padding: 12px 20px;
+    border-radius: 50%;      /* circular like image */
+    font-weight: 500;
+    text-align: center;
+    width: 120px;            /* match image height */
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: default;
+}
+
+.skill.container .skill:hover {
+    transform: scale(1.05);
+    background-color: #3b3b6b;
+}
+
+/* Skills section title */
+section h1 {
+    color: #d4c0eb;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #2c2c44;
+    color: #f0e6f6;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background-color: #3b3b6b;
+}
+
+/* Footer */
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 140px;
+    padding: 20px;
+    background-color: #2c2c44;
+    color: #d4c0eb;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    border-radius: 0 0 15px 15px; /* optional rounded bottom */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .skill.container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+    }
+
+    .skill.container .skill {
+        width: 120px;
+        height: 120px;
+    }
+
+    main img {
+        width: 120px;
+        height: 120px;
+    }
+
+    main p {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    main img, .skill.container .skill {
+        width: 100px;
+        height: 100px;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+}
