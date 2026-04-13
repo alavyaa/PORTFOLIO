@@ -38,21 +38,13 @@ Built with a fusion of modern frontend technologies and a storytelling approach,
 ---
 
 ## 📂 Project Structure
-├── public/
-│ ├── models/ # 3D assets (lotus model)
-│ └── images/ # Static assets
-│
-├── src/
-│ ├── components/ # UI + animation components
-│ ├── hooks/ # Custom hooks
-│ ├── styles/ # Global styles
-│ ├── App.jsx
-│ └── main.jsx
-│
-├── index.html
-├── tailwind.config.js
-├── vite.config.js
-└── package.json
+
+- **public/** → Static assets (images, 3D models)  
+- **src/components/** → UI + animations (core of your portfolio)  
+- **src/hooks/** → Logic abstraction (scroll, effects, etc.)  
+- **App.jsx** → Main layout & section composition  
+- **main.jsx** → App entry point  
+- **configs** → Tailwind + Vite setup
 
 ---
 
