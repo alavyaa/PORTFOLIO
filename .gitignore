@@ -45,3 +45,6 @@ coverage/
 # Optional: ignore large assets (only if needed)
 # public/models/*.glb
 # public/models/*.gltf
+
+public/images/profile.png
+public/images/profile-alt.jpeg
