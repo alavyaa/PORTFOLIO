@@ -18,12 +18,12 @@ const skillsData = [
 
 const projectsData = [
   {
-    title: 'Temporal Dashboard',
+    title: 'Debug Race',
     description:
-      'A real-time analytics dashboard with 3D data visualization, built for monitoring multiverse-scale systems.',
-    tech: ['React', 'Three.js', 'D3.js', 'WebSocket'],
+      'A real-time multiplayer coding game that transforms debugging and problem-solving into an esports-style racing experience, where players compete by solving challenges to gain speed and outperform opponents.',
+    tech: ['React', 'Phaser.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'Socket.io', 'MongoDB', 'OpenAI API'],
     image: 'temporal',
-    link: '#',
+    link: 'debug-race-ztam.onrender.com/',
   },
   {
     title: 'Nexus Event Tracker',
