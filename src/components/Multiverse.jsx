@@ -23,7 +23,7 @@ const projectsData = [
       'A real-time multiplayer coding game that transforms debugging and problem-solving into an esports-style racing experience, where players compete by solving challenges to gain speed and outperform opponents.',
     tech: ['React', 'Phaser.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'Socket.io', 'MongoDB', 'OpenAI API'],
     image: 'temporal',
-    link: 'debug-race-ztam.onrender.com/',
+    link: 'https://debug-race-ztam.onrender.com/',
   },
   {
     title: 'Kart Racing Game',
@@ -31,7 +31,7 @@ const projectsData = [
       'Developed a real-time multiplayer kart racing game featuring interactive gameplay, smooth controls, and synchronized game state, enabling players to compete in dynamic racing environments.',
     tech: ['React', 'JavaScript (Canvas)', 'Node.js', 'Express.js', 'Socket.io'],
     image: 'nexus',
-    link: 'kart-racing-game-1.onrender.com',
+    link: 'https://kart-racing-game-1.onrender.com',
   },
 ]
 
