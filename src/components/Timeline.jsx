@@ -9,6 +9,14 @@ gsap.registerPlugin(ScrollTrigger)
 
 const timelineData = [
   {
+    year: '2026',
+    title: 'Claude Code in Action',
+    institution: 'Anthropic',
+    description: 'Learned to effectively use Claude for real-world coding tasks, including context management, structured prompting, and integrating AI into development workflows.',
+    type: 'certification',
+    icon: '📜',
+  },
+  {
     year: '2024',
     title: 'Senior Secondary Education',
     institution: 'Cambridge Convent School',
