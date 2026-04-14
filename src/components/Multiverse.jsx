@@ -26,28 +26,12 @@ const projectsData = [
     link: 'debug-race-ztam.onrender.com/',
   },
   {
-    title: 'Nexus Event Tracker',
+    title: 'Kart Racing Game',
     description:
-      'Full-stack application for tracking and managing timeline deviations with AI-powered predictions.',
-    tech: ['Next.js', 'Python', 'TensorFlow', 'PostgreSQL'],
+      'Developed a real-time multiplayer kart racing game featuring interactive gameplay, smooth controls, and synchronized game state, enabling players to compete in dynamic racing environments.',
+    tech: ['React', 'JavaScript (Canvas)', 'Node.js', 'Express.js', 'Socket.io'],
     image: 'nexus',
-    link: '#',
-  },
-  {
-    title: 'Sacred Timeline CMS',
-    description:
-      'Headless CMS with a beautiful admin interface, version control, and multi-timeline content branching.',
-    tech: ['TypeScript', 'GraphQL', 'React', 'MongoDB'],
-    image: 'sacred',
-    link: '#',
-  },
-  {
-    title: 'Void Portal',
-    description:
-      'An immersive WebGL experience exploring procedural generation and particle physics simulations.',
-    tech: ['Three.js', 'GLSL', 'React', 'GSAP'],
-    image: 'void',
-    link: '#',
+    link: 'kart-racing-game-1.onrender.com',
   },
 ]
 
