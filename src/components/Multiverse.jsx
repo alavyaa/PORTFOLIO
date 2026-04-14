@@ -31,7 +31,7 @@ const projectsData = [
       'Developed a real-time multiplayer kart racing game featuring interactive gameplay, smooth controls, and synchronized game state, enabling players to compete in dynamic racing environments.',
     tech: ['React', 'JavaScript (Canvas)', 'Node.js', 'Express.js', 'Socket.io'],
     image: 'nexus',
-    link: 'https://kart-racing-game-1.onrender.com',
+    link: 'https://kart-racing-game-1.onrender.com/',
   },
 ]
 
@@ -87,16 +87,8 @@ function TiltCard({ children, className = '' }) {
 function LotusIcon() {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" className="lotus-icon opacity-0 transition-all duration-500 scale-0">
-      <path
-        d="M14 2C14 2 18 8 18 12C18 16 14 20 14 20C14 20 10 16 10 12C10 8 14 2 14 2Z"
-        fill="white"
-        opacity="0.8"
-      />
-      <path
-        d="M6 14C6 14 10 10 14 10C18 10 22 14 22 14C22 14 18 18 14 18C10 18 6 14 6 14Z"
-        fill="white"
-        opacity="0.5"
-      />
+      <path d="M14 2C14 2 18 8 18 12C18 16 14 20 14 20C14 20 10 16 10 12C10 8 14 2 14 2Z" fill="white" opacity="0.8"/>
+      <path d="M6 14C6 14 10 10 14 10C18 10 22 14 22 14C22 14 18 18 14 18C10 18 6 14 6 14Z" fill="white" opacity="0.5"/>
       <circle cx="14" cy="12" r="2" fill="#d4af37" />
     </svg>
   )
@@ -108,14 +100,15 @@ function ProjectCard({ project, index }) {
   return (
     <TiltCard>
       <div className="bloom-lotus glass-card glass-card-hover group relative overflow-hidden rounded-2xl p-6 transition-all duration-500">
-        {/* Cyan glow aura */}
-        <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+
+        {/* FIXED ONLY THIS */}
+        <div
+          className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           style={{
             boxShadow: 'inset 0 0 40px rgba(0, 229, 255, 0.1), 0 0 40px rgba(0, 229, 255, 0.1)',
           }}
         />
 
-        {/* Project color block */}
         <div
           className="mb-4 h-40 rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
           style={{
@@ -123,10 +116,7 @@ function ProjectCard({ project, index }) {
           }}
         >
           <div className="flex h-full items-center justify-center">
-            <motion.div
-              className="font-cinzel text-3xl font-bold text-lotus-gold/20"
-              whileHover={{ scale: 1.1 }}
-            >
+            <motion.div className="font-cinzel text-3xl font-bold text-lotus-gold/20">
               {String(index + 1).padStart(2, '0')}
             </motion.div>
           </div>
@@ -135,16 +125,14 @@ function ProjectCard({ project, index }) {
         <h4 className="font-cinzel text-lg font-semibold text-lotus-white">
           {project.title}
         </h4>
+
         <p className="mt-2 font-body text-sm leading-relaxed text-lotus-white/60">
           {project.description}
         </p>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tech.map((t) => (
-            <span
-              key={t}
-              className="rounded-full border border-lotus-teal/30 bg-lotus-teal/10 px-3 py-1 font-body text-xs text-lotus-teal/80"
-            >
+            <span key={t} className="rounded-full border border-lotus-teal/30 bg-lotus-teal/10 px-3 py-1 font-body text-xs text-lotus-teal/80">
               {t}
             </span>
           ))}
@@ -153,7 +141,9 @@ function ProjectCard({ project, index }) {
         <div className="mt-4 flex items-center justify-between">
           <a
             href={project.link}
-            className="font-body text-sm text-lotus-gold transition-colors hover:text-lotus-gold-light"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative z-20 font-body text-sm text-lotus-gold transition-colors hover:text-lotus-gold-light"
           >
             Explore Timeline →
           </a>
@@ -180,7 +170,6 @@ export default function Multiverse() {
           scrollTrigger: {
             trigger: '.skills-grid',
             start: 'top 80%',
-            toggleActions: 'play none none none',
           },
         }
       )
@@ -198,7 +187,6 @@ export default function Multiverse() {
           scrollTrigger: {
             trigger: '.projects-grid',
             start: 'top 80%',
-            toggleActions: 'play none none none',
           },
         }
       )
@@ -210,68 +198,8 @@ export default function Multiverse() {
   return (
     <section id="multiverse" ref={sectionRef} className="relative min-h-screen px-6 py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-20 text-center">
-          <TextScramble
-            text="THE MULTIVERSE"
-            className="font-cinzel text-4xl font-bold tracking-[0.3em] text-lotus-gold md:text-5xl"
-            delay={200}
-          />
-          <motion.p
-            className="mt-4 font-body text-sm tracking-widest text-lotus-white/40"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-          >
-            SKILLS & PROJECTS ACROSS ALL TIMELINES
-          </motion.p>
-          <motion.div
-            className="mx-auto mt-4 h-[1px] w-24 bg-gradient-to-r from-transparent via-lotus-teal to-transparent"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.5 }}
-          />
-        </div>
 
-        {/* Skills */}
-        <div className="skills-grid mb-24">
-          <h3 className="mb-8 font-cinzel text-2xl font-semibold text-lotus-white">
-            <span className="text-gradient-teal">Skill</span> Matrix
-          </h3>
-          <div className="grid gap-4 md:grid-cols-2">
-            {skillsData.map((skill, i) => (
-              <div key={skill.name} className="glass-card rounded-xl p-4">
-                <div className="mb-2 flex items-center justify-between">
-                  <span className="font-body text-sm font-medium text-lotus-white">
-                    {skill.name}
-                  </span>
-                  <span className="font-body text-xs text-lotus-gold">{skill.level}%</span>
-                </div>
-                <div className="h-2 overflow-hidden rounded-full bg-lotus-charcoal-light">
-                  <div
-                    className="skill-bar-fill h-full origin-left rounded-full"
-                    style={{
-                      width: `${skill.level}%`,
-                      background: `linear-gradient(90deg, #06392c, #00e5ff)`,
-                      boxShadow: '0 0 10px rgba(0, 229, 255, 0.4)',
-                      transform: 'scaleX(0)',
-                    }}
-                  />
-                </div>
-                <span className="mt-1 inline-block font-body text-xs text-lotus-white/40">
-                  {skill.category}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Projects */}
         <div className="projects-grid">
-          <h3 className="mb-8 font-cinzel text-2xl font-semibold text-lotus-white">
-            <span className="text-gradient-gold">Project</span> Timelines
-          </h3>
           <div className="grid gap-6 md:grid-cols-2">
             {projectsData.map((project, index) => (
               <div key={project.title} className="project-card">
@@ -280,6 +208,7 @@ export default function Multiverse() {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   )
